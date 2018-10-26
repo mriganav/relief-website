@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta , name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 30px 20px;
+    height: 100%;
+}
+table {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    font-weight: 80;
+    letter-spacing: 2px;
+    border-collapse: collapse;
+}
+a { color: white;
+text-decoration : none;
+   }
+td, th {
+    border: 2px solid #19334d;
+    text-align: left;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #2d5986;
+}
+tr:nth-child(odd) {
+    background-color: #2d5986;
+}
+tr:hover {
+    background-color: #3973ac;
+}
+th:hover {
+    background-color: #2d5986;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+}
+
+.column.left {
+
+    width: 22%;
+}
+.column.right {
+   
+    
+   font-family: 'Helvetica Neue', sans-serif; font-size: 1.3vw; font-weight: 60; letter-spacing: 1.5px;
+    width: 65%;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width: 600px) {
+    .column.left, .column.right {   
+        width: 100%;
+        padding: 0;
+    }
+}
+		#navigation {
+			position: absolute;
+			left: 0;
+			top:150px;
+			width: 15em;
+		}
+
+
+		#content {
+			margin-top: 80px;
+			margin-left: 15em;
+		}
+
+		 
+
+
+#home {background: #264d73;padding: 25px; text-align: center; color: white; font-family: 'Helvetica Neue', sans-serif; font-size: 50px; font-weight: 90; letter-spacing: 7px; }
+#homea {background: #264d73;padding: 5px; text-align: center; color: white; font-family: 'Helvetica Neue', sans-serif; font-size: 15px; font-weight: 50; letter-spacing: 2px; }
+#alertbodycolor{ color:black;background:#cc6666;}
+#Home {background-color:  #006699;}
+#News {background-color: #cc6666;margin-left:0px; right-margin:5px;}
+#Contact {background-color: #29a329;}
+#About {background-color: #a3a375;}
+#para {font-family: 'Helvetica Neue', sans-serif; font-size: 20px; font-weight: 40; letter-spacing: 1px;}
+.myForm {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 1.05em;
+width: 30em;
+padding: 1em;
+}
+
+.myForm * {
+box-sizing: border-box;
+}
+
+.myForm label {
+padding: 0;
+font-weight: bold;
+text-align: right;
+display: block;
+}
+
+.myForm input,
+.myForm select,
+.myForm textarea {
+margin-left: 2em;
+float: right;
+width: 20em;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
+
+.myForm textarea {
+height: 200px;
+}
+
+.myForm button {
+padding: 1em;
+border-radius: 0.5em;
+background: #eee;
+border: none;
+font-weight: bold;
+margin-left: 14em;
+margin-top: 1.8em;
+}
+
+.myForm button:hover {
+background: #ccc;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, ' #006699')">Home</button>
+<button class="tablink" onclick="openPage('News', this, '#e60000')" id="defaultOpen">ALERT!</button>
+<button class="tablink" onclick="openPage('Contact', this, '#29a329')">Help</button>
+<button class="tablink" onclick="openPage('About', this, '#8a8a5c')">Support Us</button>
+
+<div id="Home" class="tabcontent">
+  <h3 id="home">E Z I O<p id="homea">Helping Humanity!</p> </h3>
+  <div class="row">
+  <div class="column left">
+            <table>
+  <tr>
+    <th>QUICK CORNER</th>
+  </tr>
+  <tr>
+    <td><a href="data/earthquake.html">EARTHQUAKE</a></td>
+  </tr>
+  <tr>
+  <td><a href="data/tsunami.html">TSUNAMI</a></td>
+  </tr>
+  <tr>
+    <td><a href="data/Cyclone.html">CYCLONE</a></td>
+  </tr>
+     
+    <td> <a href="data/drought.html">DROUGHT</a></td>
+  </tr>
+    <tr>
+    <td><a href="data/flood.html">FLOOD</a></td>
+  </tr>
+</table>
+        </div>
+        <div class="column right">
+<p>A natural disaster is a major adverse event resulting from natural processes 
+   of the Earth; examples are floods, hurricanes, tornadoes, volcanic eruptions,  
+   earthquakes, tsunamis, and other geologic processes. A natural disaster can  
+   cause loss of life or property damage,  and typically leaves some economic  
+   damage in its wake, the severity of which depends on the affected population's 
+   resilience, or ability to recover  and also on the infrastructure available.An 
+   adverse event will not rise  to the level of a disaster if it occurs in an area 
+   without vulnerable population.In a vulnerable area, however, such as Nepal during  
+   the 2015 earthquake, an earthquake can have disastrous consequences and leave 
+   lasting damage, which can  require years to repair.</p>
+  <img src="data/natural disaster1.jpg" width="140" height="140" >
+   <img src="data/natural disaster2.jpg" width="140" height="140" >
+    <img src="data/natural disaster3.jpg" width="140" height="140" >
+	 <img src="data/natural disaster4.jpg" width="140" height="140" >
+	  <img src="data/natural disaster5.jpg" width="140" height="140" >
+         </div>
+</div>
+
+</div>
+
+<div id="News" class="tabcontent">
+  <h3>News</h3><div id="alertbodycolor">
+  <div id="navigation">
+		<ul>
+		 	<li><a href="#KERALA FLOODS"><font size="3">KERALA FLOODS</font></a></li>
+			 <li><a href="#CYCLONE TITLI"><font size="3">CYCLONE TITLI</font></a></li>
+		 <li><a href="#DUST STORMS"><font size="3">DUST STORMS</font></a></li>
+			
+		</ul>
+		</div>
+
+	<div id="content">
+	    
+		<h2>CURRENT DISASTERS IN INDIA</h2>
+		<p>Natural disasters in India, many of them related to the climate of India, cause massive losses of life and property. Droughts,  
+		flash floods, cyclones, avalanches,<br />  landslides brought on by torrential rains, and snowstorms pose the greatest threats.</p>
+		<img src="data/natural hazard.jpg" width="350" height="360" >
+		<h2 id="data/KERALA FLOODS">KERALA FLOODS</h2>
+		<p>Beginning on 15 August 2018, severe floods affected the south Indian state of Kerala, due to unusually high rainfall during the monsoon season. It was the worst<br /> flooding in Kerala in nearly a century.Over 483 people died, and 15 are missing.At least a million people were evacuated, mainly from Chengannur , Pandanad,<br /> Edanad, Aranmula, Kozhencherry, Ayiroor, Ranni, Pandalam, Kuttanad, Aluva, and Chalakudy, N.Paravur, Chendamangalam, Eloor and few places in Vypin Island. All 14 districts<br /> of the state were placed on red alert. According to the Kerala government, one-sixth of the total population of Kerala had been directly affected by the floods and <br />related incidents. The Indian government had declared it a Level 3 Calamity, or "calamity of a severe nature". It is the worst flood in Kerala after the great flood of<br /> 99 that happened in 1924.</p>
+		 <img src="data/kerala3.jpg" width="350" height="360" >
+      <img src="data/kerala4.jpg" width="350" height="360" >
+	  <p>The worst affected areas of the state were Wayanad, Pathanamthitta, Ernakulam, Thrissur, Kochi,  Malappuram, Kozhikode, Kannur, Palakkad, Alappuzha districts. <br />
+ Although the rain had subsided, several parts of Pathanamthitta, Ernakulam, and Thrissur districts are still inundated, where marooned people waited for rescue boats <br />or helicopters, as well as water and medicine.</p>
+	  <img src="data/kerala5.jpg" width="350" height="360" >
+	  <img src="data/kerala6.jpg" width="350" height="360" >
+	  
+	  
+	  
+	  
+	  <h2 id="CYCLONE TITLI">CYCLONE TITLI</h2>
+		<p>The 2018 North Indian Ocean cyclone season is an ongoing event in the annual cycle of tropical cyclone formation. The North Indian Ocean cyclone season has no official <br />bounds, but cyclones tend to form between April and December, with the two peaks in May and November. These dates conventionally delimit the period of each year when most tropical<br /> cyclones form in the northern Indian Ocean.</p>
+		 <img src="data/titli1.png" width="350" height="360" >
+      <img src="data/titli2.jpg" width="350" height="360" >
+	  <p>In all, eight districts - Ganjam, Gajapati, Khurda, Puri, Jagatsinghpur, Kendrapara, Bhadrak and Balasore - have been affected by very severe cyclone Titli. Cyclone 'Titli'<br /> triggered heavy to very heavy rainfall in Ganjam, Gajapati and Puri districts of Odisha, while damage of hutments and asbestos-roofed houses, street lights, road blockade<br /> due to uprooted trees were reported from Ganjam. Road communication between Paralakhemundi and Mohana and some other block headquarters in Gajapati had been<br /> disrupted under  the impact of the cyclone.</p>
+	  <img src="data/titli3.jpg" width="350" height="360" >
+	  <img src="data/titli4.jpg" width="350" height="360" >
+	  <br />
+	  <img src="data/titli5.jpg" width="350" height="360" >
+	  <img src="data/titli6.jpg" width="350" height="360" >
+	  
+	  
+	  <h2 id="DUST STORMS">DUST STORMS</h2>
+	  <p>From 2 to 3 May 2018, high-velocity dust storms swept across parts of North India and more than 125 people died and over 200 injured.In Uttar Pradesh, 43 died in  the <br />city of Agra and at least 30 died elsewhere in the state. In neighboring Rajasthan, at least 35 people died and over 200 were injured after winds downed  more than 8,000 electricity <br />poles and uprooted hundreds of trees. Storms are not uncommon in the region; however, because these storms occurred at night and with greater  wind <br />speeds  than average, the death toll was higher than usual.</p>
+	  <img src="data/dust3.jpg" width="780" height="360" >
+	   <br />
+	   
+	  <p>Indian authorities have warned citizens they are facing five days of isolated thunderstorms and high winds, after dangerous weather left more than 114 people dead across <br />northern parts of the country.</p>
+	  <p>Major affected areas are the districts of Rajasthan, Uttar pradesh, Gujrat and areas of delhi.Officials stated that the storm was more devastating than prior dust storms <br />as the stronger weather system carried more debris which caused more damage to homes and buildings, and because it struck at night, most were asleep and were unable to take<br /> precautions, leaving many killed or injured by falling structures.</p>
+	  <img src="data/dust4.png" width="350" height="360" >
+	   
+	  <img src="data/dust1.jpg" width="350" height="360" >
+	  <img src="data/dust2.jpg" width="350" height="360" >
+	  <img src="data/dust5.jpg" width="350" height="360" >
+		</div>
+</div></div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Get Immediate Response</h3>
+  <p>We will provide a form where you just need to provide your details to contact you.<br>Through this help menu we intend to provide immediate help to the people affected due to natural disaster. If anyone who is severily injured can fill this form and and through this help section we would make sure to provide suitable health care to you as soon as possible. With the help of this section we intend to minimize loss of live due to natural disasters.</p>
+  
+  <form class="myForm" method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
+
+<p>
+<label>Name 
+<input type="text" name="customer_name" required>
+</label> 
+</p>
+
+<p>
+<label>Phone Number
+<input type="tel" name="tel_no">
+</label>
+</p>
+	
+<p>
+<label>Help Priority 
+<select id="pickup_place" name="pickup_place">
+<option value="" selected="selected">Select One</option>
+<option value="website" >IMMEDIATE</option>
+<option value="membership" >MODERATE</option>
+<option value="telepathy" >LOW PRIORITY</option>
+</select>
+</label> 
+</p>
+
+<p>
+<label>About your problem 
+<textarea name="text" maxlength="500"></textarea>
+</label>
+</p>
+
+<p><button><a href="data/submit.html">SUBMIT</a></button></p>
+
+</form>
+
+</div>
+
+<div id="About" class="tabcontent">
+  <h1>About</h1>
+  
+  <p>This website  can reduce loss of life in case of a natural disaster by providing information related to prevention and management during a natural disaster . We aim to reduce panic among the people by providing necessary actions to be taken during a disaster .
+  This project has several unique features which makes it useful . Some of them are :-
+
+:There will be an alert tab in the website which will give information about the natural disaster immediately after it takes place. It will also provide necessary actions that should be taken by people affected to reduce loss of life . It will also give location affected and any future precautions so that the people can prepare themselves for the after impact of the natural disaster.
+
+:During a natural disaster people can mark themselves as safe\unsafe so that necessary actions can be taken during relief measures . If anyone is injured in a disaster they could ask for help in the website so that necessary relief could be provided to them as soon as possible .
+
+:There will be a webpage containing several precautions taken so that people can be prepared for any sort of natural disaster .
+
+:The website will be constantly updated to provide the people about the latest information about any crisis .
+
+:During any disaster we aim to start an ALL INDIA CAMPAIGN through this website to provide relief to the victims of the disaster .</p>
+<h2>DONATE</h2>
+<p>For kerala floods :-<br /><br />
+Kerala government<br />
+ <a href="https://donation.cmdrf.kerala.gov.in/">https://donation.cmdrf.kerala.gov.in/</a><br />  <br />
+ ICICI BANK <br />
+ <a href="https://www.icicibank.com/Personal-Banking/online-donation/kerala-flood-donation.page">https://www.icicibank.com/Personal-Banking/online-donation/kerala-flood-donation.page</a></p><br />
+ PAYTM LINK<br />
+ <a href="https://paytm.com/helpinghand">https://paytm.com/helpinghand/</a>
+ </div>
+
+<script>
+function openPage(pageName,elmnt,color) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(pageName).style.display = "block";
+    elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+     
+</body>
+</html>
